@@ -1,0 +1,44 @@
+﻿
+
+<div class="ui grid">
+    <div class="row">
+        <div class="sixteen wide column">
+            <div class="ui segment sixteen column">
+                <div class="ui grid">
+                    <div class="sixteen wide mobile sixteen wide tablet sixteen wide computer column">
+                        <h2 class="ui dividing header">گروهی - تک انتخابی</h2>
+                        <button id="btnAddGroupSingleChoice" class="ui mini primary button">
+                            اضافه کردن گروه
+                        </button>
+                    </div>
+                    <div class="row" id="group-single-choice-content">
+                        <div class="sixteen wide column example">
+                            <ul>
+                                <li>
+                                    توضیحات در مورد این انتخاب
+                                </li>
+                                <li>توضیحات در مورد این انتخاب</li>
+                            </ul>
+                        </div>
+
+                        <div class="sixteen wide column example">
+                            <ul>
+                                <li>مثال: سایز کوچک، متوسط، بزرگ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@* TEMPLATES *@
+
+@* SINGLE CHOICE TEMPLATE *@
+
+@Html.Partial("Edit_partials/Templates/_SingleChoiceTemplate")
+
+
+

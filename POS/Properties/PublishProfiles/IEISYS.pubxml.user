@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>ftp://ieisys.com/</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>09/21/2016 13:08:59</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>09/21/2016 13:08:59</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>12/07/2015 19:04:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>06/06/2016 15:40:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>06/06/2016 15:40:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>06/06/2016 10:45:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>06/06/2016 15:40:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>06/06/2016 15:40:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>06/06/2016 10:42:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 13:36:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/24/2012 02:53:58</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/04/2014 08:03:56</publishTime>
+    </File>
+    <File Include="bin/POS.dll">
+      <publishTime>09/26/2016 20:18:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/19/2015 07:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/19/2015 07:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/19/2015 07:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/19/2015 07:49:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/19/2015 07:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/19/2015 07:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/19/2015 07:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/19/2015 07:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/19/2015 07:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/19/2015 07:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/19/2015 07:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/19/2015 07:49:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 14:34:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 14:32:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/12/2014 01:56:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 14:32:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/28/2015 14:34:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/28/2015 14:34:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/28/2015 14:34:30</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>09/11/2013 04:58:38</publishTime>
+    </File>
+    <File Include="Content/fonts/yekan.eot">
+      <publishTime>09/21/2016 13:34:11</publishTime>
+    </File>
+    <File Include="Content/fonts/Yekan.svg">
+      <publishTime>09/21/2016 13:34:11</publishTime>
+    </File>
+    <File Include="Content/fonts/yekan.ttf">
+      <publishTime>09/21/2016 13:34:11</publishTime>
+    </File>
+    <File Include="Content/fonts/yekan.woff">
+      <publishTime>09/21/2016 13:34:11</publishTime>
+    </File>
+    <File Include="Content/semantic.rtl.css">
+      <publishTime>09/22/2016 19:42:29</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>09/26/2016 21:31:50</publishTime>
+    </File>
+    <File Include="Content/themes/basic/assets/fonts/icons.eot">
+      <publishTime>09/21/2016 13:35:41</publishTime>
+    </File>
+    <File Include="Content/themes/basic/assets/fonts/icons.svg">
+      <publishTime>09/21/2016 13:35:43</publishTime>
+    </File>
+    <File Include="Content/themes/basic/assets/fonts/icons.ttf">
+      <publishTime>09/21/2016 13:35:43</publishTime>
+    </File>
+    <File Include="Content/themes/basic/assets/fonts/icons.woff">
+      <publishTime>09/21/2016 13:35:43</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>09/21/2016 13:08:37</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/21/2016 13:08:37</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/25/2016 21:49:32</publishTime>
+    </File>
+    <File Include="public/js/common/capitalizer.js">
+      <publishTime>09/25/2016 23:29:37</publishTime>
+    </File>
+    <File Include="public/js/common/itemPagesInit.js">
+      <publishTime>09/26/2016 23:41:47</publishTime>
+    </File>
+    <File Include="public/js/config.js">
+      <publishTime>09/26/2016 20:18:37</publishTime>
+    </File>
+    <File Include="public/js/libs/domready.js">
+      <publishTime>09/25/2016 21:46:47</publishTime>
+    </File>
+    <File Include="public/js/libs/jquery-3.1.0.js">
+      <publishTime>09/21/2016 13:11:00</publishTime>
+    </File>
+    <File Include="public/js/libs/jquery.validate.js">
+      <publishTime>09/26/2016 20:06:51</publishTime>
+    </File>
+    <File Include="public/js/libs/jquery.validate.unobtrusive.js">
+      <publishTime>09/21/2016 13:08:48</publishTime>
+    </File>
+    <File Include="public/js/libs/semantic.js">
+      <publishTime>09/26/2016 21:31:58</publishTime>
+    </File>
+    <File Include="public/js/views/home/index.js">
+      <publishTime>09/25/2016 23:35:32</publishTime>
+    </File>
+    <File Include="public/js/views/item/edit.js">
+      <publishTime>09/27/2016 00:47:28</publishTime>
+    </File>
+    <File Include="public/js/views/item/new.js">
+      <publishTime>09/26/2016 19:52:16</publishTime>
+    </File>
+    <File Include="Scripts/ai.0.22.19-build00125.js">
+      <publishTime>09/21/2016 13:09:00</publishTime>
+    </File>
+    <File Include="Scripts/ai.0.22.19-build00125.min.js">
+      <publishTime>09/21/2016 13:09:00</publishTime>
+    </File>
+    <File Include="Scripts/app/main-currentTime.js">
+      <publishTime>09/25/2016 21:58:54</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.js">
+      <publishTime>09/21/2016 13:11:00</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.min.js">
+      <publishTime>09/21/2016 13:10:59</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.min.map">
+      <publishTime>09/21/2016 13:10:59</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.slim.js">
+      <publishTime>09/21/2016 13:10:59</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.slim.min.js">
+      <publishTime>09/21/2016 13:10:59</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.slim.min.map">
+      <publishTime>09/21/2016 13:10:59</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>09/21/2016 13:11:05</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>09/21/2016 13:11:05</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>09/21/2016 13:08:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>09/21/2016 13:08:48</publishTime>
+    </File>
+    <File Include="Scripts/lib/ai.0.22.19-build00125.js">
+      <publishTime>09/21/2016 13:09:00</publishTime>
+    </File>
+    <File Include="Scripts/lib/ai.0.22.19-build00125.min.js">
+      <publishTime>09/21/2016 13:09:00</publishTime>
+    </File>
+    <File Include="Scripts/lib/jquery-3.1.0.min.js">
+      <publishTime>09/21/2016 13:10:59</publishTime>
+    </File>
+    <File Include="Scripts/lib/jquery-3.1.0.min.map">
+      <publishTime>09/21/2016 13:10:59</publishTime>
+    </File>
+    <File Include="Scripts/lib/jquery.validate.min.js">
+      <publishTime>09/21/2016 13:11:05</publishTime>
+    </File>
+    <File Include="Scripts/lib/jquery.validate.unobtrusive.min.js">
+      <publishTime>09/21/2016 13:08:48</publishTime>
+    </File>
+    <File Include="Scripts/lib/modernizr-2.8.3.js">
+      <publishTime>09/21/2016 13:11:24</publishTime>
+    </File>
+    <File Include="Scripts/lib/moment-with-locales.js">
+      <publishTime>09/25/2016 21:49:32</publishTime>
+    </File>
+    <File Include="Scripts/lib/moment-with-locales.min.js">
+      <publishTime>09/25/2016 21:49:32</publishTime>
+    </File>
+    <File Include="Scripts/lib/moment.js">
+      <publishTime>09/25/2016 21:49:31</publishTime>
+    </File>
+    <File Include="Scripts/lib/moment.min.js">
+      <publishTime>09/25/2016 21:49:31</publishTime>
+    </File>
+    <File Include="Scripts/lib/r.js">
+      <publishTime>09/25/2016 20:29:46</publishTime>
+    </File>
+    <File Include="Scripts/lib/require.js">
+      <publishTime>09/25/2016 20:29:46</publishTime>
+    </File>
+    <File Include="Scripts/lib/respond.js">
+      <publishTime>09/21/2016 13:08:47</publishTime>
+    </File>
+    <File Include="Scripts/lib/respond.min.js">
+      <publishTime>09/21/2016 13:08:47</publishTime>
+    </File>
+    <File Include="Scripts/lib/_references.js">
+      <publishTime>09/26/2016 20:18:30</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>09/21/2016 13:11:24</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>09/21/2016 13:08:47</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>09/21/2016 13:08:47</publishTime>
+    </File>
+    <File Include="Scripts/semantic.js">
+      <publishTime>09/21/2016 13:10:49</publishTime>
+    </File>
+    <File Include="Scripts/site.js">
+      <publishTime>09/23/2016 18:04:53</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>09/21/2016 13:41:23</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>09/21/2016 13:08:37</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>09/21/2016 13:08:37</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>09/21/2016 13:08:37</publishTime>
+    </File>
+    <File Include="Views/Item/Edit.cshtml">
+      <publishTime>09/26/2016 23:43:10</publishTime>
+    </File>
+    <File Include="Views/Item/Edit_partials/Templates/_SingleChoiceTemplate.cshtml">
+      <publishTime>09/25/2016 20:30:19</publishTime>
+    </File>
+    <File Include="Views/Item/Edit_partials/_additional.cshtml">
+      <publishTime>09/22/2016 12:16:54</publishTime>
+    </File>
+    <File Include="Views/Item/Edit_partials/_General.cshtml">
+      <publishTime>09/27/2016 00:42:31</publishTime>
+    </File>
+    <File Include="Views/Item/Edit_partials/_variant.cshtml">
+      <publishTime>09/26/2016 16:35:50</publishTime>
+    </File>
+    <File Include="Views/Item/New.cshtml">
+      <publishTime>09/25/2016 23:22:14</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>09/21/2016 13:08:37</publishTime>
+    </File>
+    <File Include="Views/Shared/_Breadcrumb.cshtml">
+      <publishTime>09/21/2016 13:38:42</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>09/25/2016 23:21:24</publishTime>
+    </File>
+    <File Include="Views/Shared/_Navigation.cshtml">
+      <publishTime>09/21/2016 13:18:05</publishTime>
+    </File>
+    <File Include="Views/Shared/_Sidebar.cshtml">
+      <publishTime>09/26/2016 00:04:39</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>09/21/2016 13:08:37</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>09/21/2016 13:08:37</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/27/2016 00:57:04</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,46 @@
+﻿@using POS.Helpers
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @*@Styles.Render("~/Content/css")*@
+    <link rel="stylesheet" type="text/css" href="@Url.Content("../../Content/semantic.rtl.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("../../Content/Site.css")" />
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @Html.Partial("_Navigation")
+
+    <div class="main-wrapper">
+        <aside>
+            @Html.Partial("_Sidebar")
+        </aside>
+        <main>
+            <div class="scrollbar-wrapper">
+                <div class="scrollbar-overlay"></div>
+                <div class="content-wrapper">
+                    <div class="grid-wrapper">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+    <script src="@Url.Content("~/Scripts/lib/require.js")"></script>
+
+    <script>
+        @Html.ViewSpecificRequireJS()
+    </script>
+
+    @*@Scripts.Render("~/bundles/jquery")
+        <script src="@Url.Content("../../Scripts/semantic.js")"></script>
+        <script src="@Url.Content("../../Scripts/site.js")"></script>*@
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

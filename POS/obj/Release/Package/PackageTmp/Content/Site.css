@@ -1,0 +1,117 @@
+﻿.main-wrapper {
+  /*margin-top: 64px;*/
+}
+
+.sidebar-wrapper {
+  width: 225px;
+  min-height: 91vh;
+  height: auto;
+  display: inline-block;
+  position: fixed;
+  top: 64px;
+  right: 15px;
+  background-color: #f2f6f9;
+}
+
+
+.scrollbar-wrapper {
+  position: fixed;
+  left: 10px;
+  top: 64px;
+  height: 91vh;
+}
+
+.grid-wrapper{
+  position: relative;
+  padding: 20px;
+}
+
+.content-wrapper {
+  width: calc(100vw - 280px);
+  display: inline-block;
+  vertical-align: top;
+  /*position: fixed;*/
+  top: 64px;
+  right: 255px;
+  min-height: 91vh;
+  background-color: #f2f6f9;
+  max-height: 91vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 50;
+}
+
+
+.scrollbar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 22px;
+  background-color: #f2f6f9;
+  z-index: 100;
+}
+
+.sidebar-wrapper .links ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.sidebar-wrapper .links ul li {
+  padding: 10px;
+  width: 100%;
+}
+
+.sidebar-wrapper .links ul li:hover{
+  background-color: #d5dadd;
+}
+
+
+.sidebar-wrapper .links ul li a{
+  text-decoration: none;
+  color: #678098;
+  width: 100%;
+  display: block;
+}
+
+.sidebar-icons{
+  padding-left: 5px;
+}
+
+.loader-overlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 50;
+}
+
+@media only screen and (max-width: 768px) {
+   .sidebar-wrapper {
+       display: none;
+   }
+
+   .content-wrapper {
+       width: 100vw;
+       right: 0;
+   }
+
+   .scrollbar-overlay {
+       display: none;
+   }
+}
+
+
+
+body {
+  background-color: rgb(233, 236, 243);
+}
+
+.my-error {
+    position: absolute !important;
+    left: 0 !important;
+    z-index: 150;
+    top: -15px;
+}
