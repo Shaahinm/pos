@@ -1,4 +1,6 @@
-﻿<div class="ui grid">
+﻿@model POS.Models.EditViewModel
+
+<div class="ui grid">
     <div class="row">
         <div class="sixteen wide column">
             <h1>ایجاد تغییرات در محصول</h1>
@@ -18,7 +20,8 @@
                         <div class="ui form">
                             <div class="field required">
                                 <label>نام محصول</label>
-                                <input id="itemName" required type="text" placeholder="نام محصول">
+                                @Html.TextBoxFor(m => m.itemName, new { @class = "", placeholder = "نام محصول" })
+                                @*<input id="@Model.ItemName" type="text" placeholder="نام محصول">*@
                             </div>
                         </div>
                     </div>
@@ -26,7 +29,8 @@
                         <div class="ui form">
                             <div class="field required">
                                 <label>SKU</label>
-                                <input id="itemSku" type="text" placeholder="اسکیو">
+                                @Html.TextBoxFor(m => m.itemSku, new { @class = "", placeholder = "اسکیو" })
+                                @*<input id="itemSku" type="text" placeholder="اسکیو">*@
                             </div>
                         </div>
                     </div>
@@ -35,15 +39,20 @@
                             <div class="field">
                                 <label>دپارتمان</label>
                                 <div class="ui action input">
-                                    <select id="itemDepartment" class="ui selection fluid dropdown ajax-caller" name="itemDepartment"  data-url="department">
-                                        <option data-value="0">بدون دپارتمان</option>
-                                    </select>
+                                    @Html.DropDownListFor(m => m.itemDepartmentId, Model.itemDepartment)
+                                    @*<div class="ui fluid selection dropdown" id="itemDepartment">
+                                        <i class="dropdown icon"></i>
+                                        <div class="default text">بدون دپارتمان</div>
+                                        <div class="menu ajax-caller" data-url="department">
+
+                                        </div>
+                                    </div>*@
                                     <button class="ui primary button">
                                         <i class="add large inverted circle icon" style="margin-left: 0"></i>
                                     </button>
-                                    <div class="ui active dimmer inverted">
+                                    @*<div class="ui active dimmer inverted">
                                         <div class="ui small text loader">در حال بارگزاری</div>
-                                    </div>
+                                    </div>*@
                                 </div>
                             </div>
                         </div>
@@ -53,15 +62,20 @@
                             <div class="field">
                                 <label>دسته بندی</label>
                                 <div class="ui action input">
-                                    <select id="itemCategory" class="ui selection fluid dropdown ajax-caller" name="itemCategory" data-url="category">
-                                        <option data-value="0">بدون دسته بندی</option>
-                                    </select>
+                                    @Html.DropDownListFor(m => m.itemCategoryId, Model.itemCategory)
+                                    @*<div class="ui fluid selection dropdown" id="itemCategory">
+                                        <i class="dropdown icon"></i>
+                                        <div class="default text">بدون دسته بندی</div>
+                                        <div class="menu ajax-caller" data-url="category">
+
+                                        </div>
+                                    </div>*@
                                     <button class="ui primary button">
                                         <i class="add large inverted circle icon" style="margin-left: 0"></i>
                                     </button>
-                                    <div class="ui active dimmer inverted">
+                                    @*<div class="ui active dimmer inverted">
                                         <div class="ui small text loader">در حال بارگزاری</div>
-                                    </div>
+                                    </div>*@
                                 </div>
                             </div>
                         </div>
@@ -71,13 +85,25 @@
                             <div class="field">
                                 <label>تگ های محصول</label>
                                 <div class="ui action input">
-                                    <div class="ui fluid multiple search selection dropdown" id="tag-input">
+                                    <div class="ui fluid multiple search selection dropdown" id="itemTag">
+                                        <input type="hidden" value="@Model.tags">
+                                        <i class="dropdown icon"></i>
+                                        
+                                        @foreach (var tag in @Model.itemTag)
+                                        {
+                                            <a class="ui label transition visible" data-value="@tag.value" style="display: inline-block !important;">@tag.text<i class="delete icon"></i></a>
+                                        }
+                                        <div class="default text"></div>
+                                        <div class="menu">
+                                        </div>
+                                    </div>
+                                    @*<div class="ui fluid multiple search selection dropdown" id="itemTag">
                                         <input type="hidden">
                                         <i class="dropdown icon"></i>
                                         <div class="default text">تگ های محصول</div>
                                         <div class="menu">
                                         </div>
-                                    </div>
+                                    </div>*@
                                 </div>
                             </div>
                         </div>
@@ -107,33 +133,28 @@
                 </div>
                 <div class="sixteen wide tablet eight wide computer column">
                     <div class="ui form">
-                        <div class="field">
+                        <div class="field required">
                             <label>نوع قیمت</label>
                             <div class="ui action input">
-                                @*<div class="ui fluid selection dropdown" id="itemPrice">
+                                <div class="ui fluid selection dropdown" id="itemPrice" name="itemPrice">
                                     <i class="dropdown icon"></i>
                                     <div class="default text">ثابت</div>
-                                    <div id="itemCategory" name="itemCategory"  class="menu">
+                                    <div class="menu">
                                         <div class="item" data-value="fixed">ثابت</div>
                                         <div class="item" data-value="variable">متغییر</div>
                                         <div class="item" data-value="unit">قیمت بر اساس تعداد</div>
                                     </div>
-                                </div>*@
-                                <select id="itemPrice" class="ui selection fluid dropdown" name="itemPrice">
-                                    <option></option>
-                                    <option data-value="fixed">ثابت</option>
-                                    <option data-value="variable">متغییر</option>
-                                    <option data-value="unit">بر اساس تعداد</option>
-                                </select>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="sixteen wide tablet eight wide computer column">
                     <div class="ui form">
-                        <div class="field">
+                        <div class="field required">
                             <label>بهای تمام شده</label>
-                            <input type="text" class="persian-number" placeholder="بهای محصول">
+                            @Html.TextBoxFor(m => m.cost, new { @class = "", placeholder = "بهای محصول" })
+                            @*<input type="text" class="persian-number" placeholder="بهای محصول">*@
                         </div>
                     </div>
                 </div>
@@ -145,36 +166,33 @@
                             <div class="sixteen wide tablet four wide computer column">
                                 <div class="ui form">
                                     <div class="field">
-                                        <input type="text" placeholder="قیمت بدون مالیات">
+                                        @Html.TextBoxFor(m => m.price, new { @class = "", placeholder = "قیمت بدون مالیات" })
+                                        @*<input type="text" placeholder="قیمت بدون مالیات">*@
                                     </div>
                                 </div>
                             </div>
                             <div class="sixteen wide tablet two wide computer column center aligned">
-                                <i class="add icon"></i>
+                                <i class="big inverted blue bordered add icon"></i>
                             </div>
                             <div class="sixteen wide tablet four wide computer column">
                                 <div class="ui form">
                                     <div class="field">
                                         <div class="ui action input">
-                                            <div class="ui fluid selection dropdown">
-                                                <i class="dropdown icon"></i>
-                                                <div class="default text">نوع مالیات</div>
-                                                <div class="menu">
-
-                                                </div>
-                                            </div>
+                                            @Html.DropDownListFor(m => m.taxtTypeId, Model.taxType)
+                                            <button class="ui primary button">
+                                                <i class="add large inverted circle icon" style="margin-left: 0"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="sixteen wide tablet two wide computer column center aligned">
-                                <i style="display: block;" class="minus icon"></i>
-                                <i style="display: block;" class="minus icon"></i>
+                                <i class="big inverted blue bordered minus icon"></i>
                             </div>
                             <div class="sixteen wide tablet four wide computer column">
                                 <div class="ui form">
                                     <div class="field">
-                                        <input type="text" name="totalPrice" id="totalPrice" placeholder="قیمت بعد از مالیات">
+                                        @Html.TextBoxFor(m => m.taxedPrice, new { @class = "", placeholder = "قیمت بعد از مالیات" })
                                     </div>
                                 </div>
                             </div>

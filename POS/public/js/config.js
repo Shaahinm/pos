@@ -8,8 +8,8 @@
         iteminit: "common/itemPagesInit"
     },
     shim: {
-        "semantic": "jquery",
-        "jqueryvalidate" : "jquery"
+        "semantic": ["jquery"],
+        "jqueryvalidate" : ["jquery"]
     },
     urlArgs: "bust=" + (new Date()).getTime()
 });

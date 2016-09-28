@@ -1,4 +1,4 @@
-﻿require(["jquery", "iteminit", "jqueryvalidate", "semantic", "domready!"], function ($, iteminit, val) {
+﻿require(["jquery", "iteminit", "jqueryvalidate", "semantic", "domready!"], function ($, iteminit) {
 
     // semantic init
     $(".accordion").accordion();
@@ -6,19 +6,17 @@
     $(".menu .item").tab();
     $(".ui.checkbox").checkbox();
 
-    $("#tag-input").dropdown({
+  
+    var radioName = 0;
+
+    $("#itemTag").dropdown({
         allowAdditions: true,
         maxSelections: 5,
         apiSettings: {
             url: "http://ieisys.com:12220/api/tag/{query}"
-}
+        }
     });
-
-    var radioName = 0;
-
-    $.each($(".ajax-caller"), function (key, value) {
-        iteminit.initAjax(value);
-    });
+    $("#itemTag").dropdown("refresh");
 
     iteminit.priceSectionUiInit();
 
@@ -63,8 +61,36 @@
 
     // form validation
 
-    $("#btnSave").on("click", function () {
-        $("#CreateItemForm").form("submit");
+    $("#btnSave").on("click", function (e) {
+
+        e.preventDefault();
+        ////$("#CreateItemForm").form("submit");
+        //var toSend = {
+        //    itemname: $("#itemName").val(),
+        //    itemsku: $("#itemSku").val(),
+        //    itemtag: $("#itemTag").dropdown("get value"),
+        //    itemdepartment: $("#itemDepartment").dropdown("get value"),
+        //    itemcategory: $("#itemCategory").dropdown("get value")
+        //};
+
+
+
+        //$.ajax({
+        //    url: "http://ieisys.com:12220/api/item",
+        //    method: "POST",
+        //    data: toSend,
+        //    timeout: 10000
+        //}).done(function (data) {
+        //    if (data) {
+        //        location.replace("/item/new/jhsadjksahdkjsahkjsa");
+        //    }
+        //}).fail(function (data) {
+        //    alert(data);
+        //}).always(function () {
+
+        //});
+        //console.log(toSend);
+
     });
 
     $("#CreateItemForm")
