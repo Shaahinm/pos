@@ -40,14 +40,7 @@
                                 <label>دپارتمان</label>
                                 <div class="ui action input">
                                     @Html.DropDownListFor(m => m.itemDepartmentId, Model.itemDepartment)
-                                    @*<div class="ui fluid selection dropdown" id="itemDepartment">
-                                        <i class="dropdown icon"></i>
-                                        <div class="default text">بدون دپارتمان</div>
-                                        <div class="menu ajax-caller" data-url="department">
-
-                                        </div>
-                                    </div>*@
-                                    <button class="ui primary button">
+                                    <button id="btnQuickAddDepartment" class="ui primary button">
                                         <i class="add large inverted circle icon" style="margin-left: 0"></i>
                                     </button>
                                     @*<div class="ui active dimmer inverted">
@@ -136,15 +129,7 @@
                         <div class="field required">
                             <label>نوع قیمت</label>
                             <div class="ui action input">
-                                <div class="ui fluid selection dropdown" id="itemPrice" name="itemPrice">
-                                    <i class="dropdown icon"></i>
-                                    <div class="default text">ثابت</div>
-                                    <div class="menu">
-                                        <div class="item" data-value="fixed">ثابت</div>
-                                        <div class="item" data-value="variable">متغییر</div>
-                                        <div class="item" data-value="unit">قیمت بر اساس تعداد</div>
-                                    </div>
-                                </div>
+                                @Html.DropDownListFor(m => m.priceTypeId, Model.priceType)
                             </div>
                         </div>
                     </div>

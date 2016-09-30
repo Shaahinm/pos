@@ -1,1 +1,2 @@
-﻿
+﻿require(["modals"], function (modals) {
+});

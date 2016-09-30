@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIZBFmxpEikO1JBfNPxMsOQAAAAACAAAAAAAQZgAAAAEAACAAAABLJHAgv+/ifp5D31n+WQMrKYO4vKl2t7pE2XGUgM4OWQAAAAAOgAAAAAIAACAAAAAJphZBKO6ZuPQP1F+QvTPiiMbmAjTz8eXMcJopvdvXKyAAAAAp3MRzxsoMREreDLW0hGjl54B+a++i70WIfeR0XhWuDEAAAAAdg76ixc/PJtSIaFz29YAGlnP649CmIQturZ9is66E+hGKUP7R18vyzxIRE+tmaATBPRD68v8OG5qdF44QzGnQ</EncryptedPassword>
     <_PublishTargetUrl>ftp://ieisys.com/</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
@@ -50,7 +50,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/04/2014 08:03:56</publishTime>
     </File>
     <File Include="bin/POS.dll">
-      <publishTime>09/26/2016 20:18:46</publishTime>
+      <publishTime>09/30/2016 12:28:54</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>06/19/2015 07:49:46</publishTime>
@@ -125,7 +125,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/21/2016 13:34:11</publishTime>
     </File>
     <File Include="Content/semantic.rtl.css">
-      <publishTime>09/22/2016 19:42:29</publishTime>
+      <publishTime>09/30/2016 15:33:36</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>09/26/2016 21:31:50</publishTime>
@@ -142,6 +142,24 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/themes/basic/assets/fonts/icons.woff">
       <publishTime>09/21/2016 13:35:43</publishTime>
     </File>
+    <File Include="Content/themes/default/assets/fonts/icons.eot">
+      <publishTime>09/21/2016 13:35:03</publishTime>
+    </File>
+    <File Include="Content/themes/default/assets/fonts/icons.svg">
+      <publishTime>09/21/2016 13:35:03</publishTime>
+    </File>
+    <File Include="Content/themes/default/assets/fonts/icons.ttf">
+      <publishTime>09/21/2016 13:35:03</publishTime>
+    </File>
+    <File Include="Content/themes/default/assets/fonts/icons.woff">
+      <publishTime>09/21/2016 13:35:03</publishTime>
+    </File>
+    <File Include="Content/themes/default/assets/fonts/icons.woff2">
+      <publishTime>09/21/2016 13:35:03</publishTime>
+    </File>
+    <File Include="Content/themes/default/assets/images/flags.png">
+      <publishTime>09/21/2016 13:35:03</publishTime>
+    </File>
     <File Include="favicon.ico">
       <publishTime>09/21/2016 13:08:37</publishTime>
     </File>
@@ -155,10 +173,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/25/2016 23:29:37</publishTime>
     </File>
     <File Include="public/js/common/itemPagesInit.js">
-      <publishTime>09/26/2016 23:41:47</publishTime>
+      <publishTime>09/29/2016 16:41:25</publishTime>
+    </File>
+    <File Include="public/js/common/modals.js">
+      <publishTime>09/30/2016 15:28:41</publishTime>
     </File>
     <File Include="public/js/config.js">
-      <publishTime>09/26/2016 20:18:37</publishTime>
+      <publishTime>09/30/2016 11:55:28</publishTime>
     </File>
     <File Include="public/js/libs/domready.js">
       <publishTime>09/25/2016 21:46:47</publishTime>
@@ -176,13 +197,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/26/2016 21:31:58</publishTime>
     </File>
     <File Include="public/js/views/home/index.js">
-      <publishTime>09/25/2016 23:35:32</publishTime>
+      <publishTime>09/29/2016 16:15:54</publishTime>
     </File>
     <File Include="public/js/views/item/edit.js">
-      <publishTime>09/27/2016 00:47:28</publishTime>
+      <publishTime>09/28/2016 23:41:02</publishTime>
+    </File>
+    <File Include="public/js/views/item/index.js">
+      <publishTime>09/29/2016 15:16:03</publishTime>
     </File>
     <File Include="public/js/views/item/new.js">
-      <publishTime>09/26/2016 19:52:16</publishTime>
+      <publishTime>09/30/2016 15:09:37</publishTime>
     </File>
     <File Include="Scripts/ai.0.22.19-build00125.js">
       <publishTime>09/21/2016 13:09:00</publishTime>
@@ -269,7 +293,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/21/2016 13:08:47</publishTime>
     </File>
     <File Include="Scripts/lib/_references.js">
-      <publishTime>09/26/2016 20:18:30</publishTime>
+      <publishTime>09/29/2016 15:15:37</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.8.3.js">
       <publishTime>09/21/2016 13:11:24</publishTime>
@@ -299,7 +323,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/21/2016 13:08:37</publishTime>
     </File>
     <File Include="Views/Item/Edit.cshtml">
-      <publishTime>09/26/2016 23:43:10</publishTime>
+      <publishTime>09/28/2016 22:52:58</publishTime>
     </File>
     <File Include="Views/Item/Edit_partials/Templates/_SingleChoiceTemplate.cshtml">
       <publishTime>09/25/2016 20:30:19</publishTime>
@@ -308,13 +332,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/22/2016 12:16:54</publishTime>
     </File>
     <File Include="Views/Item/Edit_partials/_General.cshtml">
-      <publishTime>09/27/2016 00:42:31</publishTime>
+      <publishTime>09/29/2016 13:27:45</publishTime>
     </File>
     <File Include="Views/Item/Edit_partials/_variant.cshtml">
       <publishTime>09/26/2016 16:35:50</publishTime>
     </File>
     <File Include="Views/Item/New.cshtml">
-      <publishTime>09/25/2016 23:22:14</publishTime>
+      <publishTime>09/30/2016 12:14:42</publishTime>
+    </File>
+    <File Include="Views/Item/Templates/_QuickAddTemplates.cshtml">
+      <publishTime>09/30/2016 12:18:19</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>09/21/2016 13:08:37</publishTime>
@@ -323,7 +350,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/21/2016 13:38:42</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>09/25/2016 23:21:24</publishTime>
+      <publishTime>09/30/2016 14:57:37</publishTime>
     </File>
     <File Include="Views/Shared/_Navigation.cshtml">
       <publishTime>09/21/2016 13:18:05</publishTime>
@@ -338,7 +365,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/21/2016 13:08:37</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/27/2016 00:57:04</publishTime>
+      <publishTime>09/29/2016 12:49:42</publishTime>
     </File>
   </ItemGroup>
 </Project>

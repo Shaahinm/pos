@@ -1,21 +1,21 @@
-﻿
+﻿@model POS.Models.EditViewModel
+
 @{
     ViewBag.Title = "Edit";
 }
 
 
-
 <div class="ui top attached fluid tabular menu">
-    <a class="active item" data-tab="general">اطلاعات عمومی</a>
-    <a class="item" data-tab="additional">اطلاعات اضافه</a>
+    <a class="item" data-tab="general">اطلاعات عمومی</a>
+    <a class="active item" data-tab="additional">اطلاعات اضافه</a>
     <a class="item" data-tab="variant">متغییرات</a>
 </div>
-<div class="ui bottom attached active tab segment" data-tab="general">
+<div class="ui bottom attached tab segment" data-tab="general">
     <form id="CreateItemForm" class="ui form">
-        @Html.Partial("Edit_partials/_General")
+        @Html.Partial("Edit_partials/_General", @Model)
     </form>
 </div>
-<div class="ui bottom attached tab segment" data-tab="additional">
+<div class="ui bottom attached active tab segment" data-tab="additional">
     @Html.Partial("Edit_partials/_additional")
 </div>
 <div class="ui bottom attached tab segment" data-tab="variant">

@@ -64,32 +64,46 @@
     $("#btnSave").on("click", function (e) {
 
         e.preventDefault();
-        ////$("#CreateItemForm").form("submit");
-        //var toSend = {
-        //    itemname: $("#itemName").val(),
-        //    itemsku: $("#itemSku").val(),
-        //    itemtag: $("#itemTag").dropdown("get value"),
-        //    itemdepartment: $("#itemDepartment").dropdown("get value"),
-        //    itemcategory: $("#itemCategory").dropdown("get value")
-        //};
+        $("#CreateItemForm").form("validate");
+        var isValid = $("#CreateItemForm").form("is valid");
+        if (!isValid) {
+            return;
+        }
+        var toSend = {
+            _id: $("#_id").val(),
+            itemName: $("#itemName").val(),
+            itemSku: $("#itemSku").val(),
+            itemTag: $("#itemTag").dropdown("get value").split(","),
+            itemDepartment: $("#itemDepartmentId").dropdown("get value"),
+            itemCategory: $("#itemCategoryId").dropdown("get value"),
+            priceType: $("#priceTypeId").dropdown("get value"),
+            cost: $("#cost").val(),
+            taxType: $("#taxtTypeId").dropdown("get value"),
+            price: $("#price").val(),
+            taxedPrice: $("#taxedPrice").val()
+        };
 
+        console.log(JSON.stringify(toSend));
 
+        $("#pageLoader").addClass("active");
 
-        //$.ajax({
-        //    url: "http://ieisys.com:12220/api/item",
-        //    method: "POST",
-        //    data: toSend,
-        //    timeout: 10000
-        //}).done(function (data) {
-        //    if (data) {
-        //        location.replace("/item/new/jhsadjksahdkjsahkjsa");
-        //    }
-        //}).fail(function (data) {
-        //    alert(data);
-        //}).always(function () {
-
-        //});
-        //console.log(toSend);
+        $.ajax({
+            url: "http://ieisys.com:12220/api/item",
+            method: "POST",
+            data: JSON.stringify(toSend),
+            contentType: "application/json",
+            timeout: 10000
+        }).done(function (data) {
+            if (data) {
+                $("#pageLoader").removeClass("active");
+                location.replace("/home/index");
+                console.log(data);
+            }
+        }).fail(function (data) {
+            $("#pageLoader").removeClass("active");
+        }).always(function () {
+            $("#pageLoader").removeClass("active");
+        });
 
     });
 

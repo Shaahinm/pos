@@ -52,7 +52,7 @@
 
                                             </div>
                                         </div>
-                                        <button class="ui primary button">
+                                        <button id="btnQuickAddDepartment" class="ui primary button">
                                             <i class="add large inverted circle icon" style="margin-left: 0"></i>
                                         </button>
                                         <div class="ui active dimmer inverted">
@@ -74,7 +74,7 @@
 
                                             </div>
                                         </div>
-                                        <button class="ui primary button">
+                                        <button id="btnQuickAddCategory" class="ui primary button">
                                             <i class="add large inverted circle icon" style="margin-left: 0"></i>
                                         </button>
                                         <div class="ui active dimmer inverted">
@@ -96,6 +96,9 @@
                                             <div class="menu">
                                             </div>
                                         </div>
+                                        <button id="btnQuickAddTag" class="ui primary button">
+                                            <i class="add large inverted circle icon" style="margin-left: 0"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -174,7 +177,7 @@
                                                     <div class="menu ajax-caller" data-url="tax">
                                                     </div>
                                                 </div>
-                                                <button class="ui primary button">
+                                                <button id="btnQuickAddTaxType" class="ui primary button">
                                                     <i class="add large inverted circle icon" style="margin-left: 0"></i>
                                                 </button>
                                                 <div class="ui active dimmer inverted">
@@ -266,5 +269,7 @@
             <div id="btnSave" class="ui primary submit button">ذخیره</div>
         </div>
     </div>
-    <!-- END OF PRICING -->
+<!-- END OF PRICING -->
+
+    @Html.Partial("Templates/_QuickAddTemplates")
 </div>

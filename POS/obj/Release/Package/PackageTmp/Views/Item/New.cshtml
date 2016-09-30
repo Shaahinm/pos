@@ -5,175 +5,55 @@
 }
 
 <div class="ui grid">
-<div class="row">
-    <div class="sixteen wide column">
-        <h1>اضافه کردن محصول</h1>
-    </div>
-</div>
-
-<div class="row">
-    @Html.Partial("_Breadcrumb")
-</div>
-
-<!-- GENRAL SECTION -->
-<div class="row">
-    <div class="sixteen wide column">
-        <div class="ui segment sixteen column">
-            <div class="ui grid">
-                <div class="sixteen wide mobile sixteen wide tablet sixteen wide computer column">
-                    <h2 class="ui dividing header">اطلاعات عمومی</h2>
-                </div>
-                <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
-                    <div class="ui form">
-                        <div class="field">
-                            <label>نام محصول</label>
-                            <input type="text" placeholder="نام محصول">
-                        </div>
-                    </div>
-                </div>
-                <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
-                    <div class="ui form">
-                        <div class="field">
-                            <label>SKU</label>
-                            <input type="text" placeholder="اسکیو">
-                        </div>
-                    </div>
-                </div>
-                <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
-                    <div class="ui form">
-                        <div class="field">
-                            <label>دپارتمان</label>
-                            <div class="ui action input">
-                                <div class="ui fluid selection dropdown">
-                                    <input type="hidden" name="gender">
-                                    <i class="dropdown icon"></i>
-                                    <div class="default text">بدون دپارتمان</div>
-                                    <div class="menu menu-ajax-init" data-url="department">
-
-                                    </div>
-                                </div>
-                                <button class="ui button">
-                                    <i class="add icon"></i>
-                                </button>
-                                <div class="ui active dimmer inverted">
-                                    <div class="ui small text loader">در حال بارگزاری</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
-                    <div class="ui form">
-                        <div class="field">
-                            <label>دسته بندی</label>
-                            <div class="ui action input">
-                                <div class="ui fluid selection dropdown">
-                                    <i class="dropdown icon"></i>
-                                    <div class="default text">بدون دسته بندی</div>
-                                    <div class="menu menu-ajax-init" data-url="category">
-                                    </div>
-                                </div>
-                                <button class="ui button">
-                                    <i class="add icon"></i>
-                                </button>
-                                <div class="ui active dimmer inverted">
-                                    <div class="ui small text loader">در حال بارگزاری</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
-                    <div class="ui form">
-                        <div class="field">
-                            <label>تگ های محصول</label>
-                            <div class="ui action input">
-                                <div class="ui fluid multiple search selection dropdown" id="tag-input">
-                                    <i class="dropdown icon"></i>
-                                    <div class="default text">تگ های محصول</div>
-                                    <div class="menu">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
-                    <div class="ui form">
-                        <div class="field">
-                            <label>عکس محصول</label>
-                            <input type="file" placeholder="نام محصول">
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="row">
+        <div class="sixteen wide column">
+            <h1>اضافه کردن محصول</h1>
         </div>
     </div>
-</div>
-<!-- END OF GENRAL SECTION -->
-<!-- PRICING -->
-<div class="sixteen wide column">
-    <div class="ui segment sixteen column">
-        <div class="ui grid">
-            <div class="sixteen wide tablet sixteen wide computer column">
-                <h2 class="ui dividing header">قیمت گذاری</h2>
-            </div>
-            <div class="sixteen wide tablet eight wide computer column">
-                <div class="ui form">
-                    <div class="field">
-                        <label>نوع قیمت</label>
-                        <div class="ui action input">
-                            <div class="ui fluid selection dropdown" id="ddl-price">
-                                <i class="dropdown icon"></i>
-                                <div class="default text">ثابت</div>
-                                <div class="menu">
-                                    <div class="item" data-value="fixed">ثابت</div>
-                                    <div class="item" data-value="variable">متغییر</div>
-                                    <div class="item" data-value="unit">قیمت بر اساس تعداد</div>
-                                </div>
-                            </div>
-                            <!-- <div class="ui active dimmer inverted">
-                                <div class="ui small text loader">در حال بارگزاری</div>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sixteen wide tablet eight wide computer column">
-                <div class="ui form">
-                    <div class="field">
-                        <label>بهای تمام شده</label>
-                        <input type="text" class="persian-number" placeholder="بهای محصول">
-                    </div>
-                </div>
-            </div>
-            <!-- fixed segment -->
-            <div id="fixed-segment" class="sixteen wide column">
+
+    <div class="row">
+        @Html.Partial("_Breadcrumb")
+    </div>
+
+
+    <div class="row">
+        <div class="sixteen wide column">
+            <div class="ui form" id="CreateItemForm">
                 <div class="ui segment sixteen column">
-                    <h3 class="ui dividing header">قیمت</h3>
                     <div class="ui grid">
-                        <div class="sixteen wide tablet four wide computer column">
+                        <div class="sixteen wide mobile sixteen wide tablet sixteen wide computer column">
+                            <h2 class="ui dividing header">اطلاعات عمومی</h2>
+                        </div>
+                        <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
                             <div class="ui form">
-                                <div class="field">
-                                    <input type="text" placeholder="قیمت بدون مالیات">
+                                <div class="field required">
+                                    <label>نام محصول</label>
+                                    <input id="itemName" name="itemName" type="text" placeholder="نام محصول">
                                 </div>
                             </div>
                         </div>
-                        <div class="sixteen wide tablet two wide computer column center aligned">
-                            <i class="add icon"></i>
+                        <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
+                            <div class="ui form">
+                                <div class="field required">
+                                    <label>SKU</label>
+                                    <input id="itemSku" type="text" placeholder="اسکیو">
+                                </div>
+                            </div>
                         </div>
-                        <div class="sixteen wide tablet four wide computer column">
+                        <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
                             <div class="ui form">
                                 <div class="field">
+                                    <label>دپارتمان</label>
                                     <div class="ui action input">
-                                        <div class="ui fluid selection dropdown">
+                                        <div class="ui fluid selection dropdown" id="itemDepartment">
                                             <i class="dropdown icon"></i>
-                                            <div class="default text">نوع مالیات</div>
-                                            <div class="menu menu-ajax-init" data-url="tax">
+                                            <div class="default text">بدون دپارتمان</div>
+                                            <div class="menu ajax-caller" data-url="department">
+
                                             </div>
                                         </div>
-                                        <button class="ui button">
-                                            <i class="add icon"></i>
+                                        <button id="btnQuickAddDepartment" class="ui primary button">
+                                            <i class="add large inverted circle icon" style="margin-left: 0"></i>
                                         </button>
                                         <div class="ui active dimmer inverted">
                                             <div class="ui small text loader">در حال بارگزاری</div>
@@ -182,52 +62,146 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="sixteen wide tablet two wide computer column center aligned">
-                            <i style="display: block;" class="minus icon"></i>
-                            <i style="display: block;" class="minus icon"></i>
-                        </div>
-                        <div class="sixteen wide tablet four wide computer column">
+                        <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
                             <div class="ui form">
                                 <div class="field">
-                                    <input type="text" name="totalPrice" id="totalPrice" placeholder="قیمت بعد از مالیات">
+                                    <label>دسته بندی</label>
+                                    <div class="ui action input">
+                                        <div class="ui fluid selection dropdown" id="itemCategory">
+                                            <i class="dropdown icon"></i>
+                                            <div class="default text">بدون دسته بندی</div>
+                                            <div class="menu ajax-caller" data-url="category">
+
+                                            </div>
+                                        </div>
+                                        <button id="btnQuickAddCategory" class="ui primary button">
+                                            <i class="add large inverted circle icon" style="margin-left: 0"></i>
+                                        </button>
+                                        <div class="ui active dimmer inverted">
+                                            <div class="ui small text loader">در حال بارگزاری</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
+                            <div class="ui form">
+                                <div class="field">
+                                    <label>تگ های محصول</label>
+                                    <div class="ui action input">
+                                        <div class="ui fluid multiple search selection dropdown" id="itemTag">
+                                            <input type="hidden">
+                                            <i class="dropdown icon"></i>
+                                            <div class="default text">تگ های محصول</div>
+                                            <div class="menu">
+                                            </div>
+                                        </div>
+                                        <button id="btnQuickAddTag" class="ui primary button">
+                                            <i class="add large inverted circle icon" style="margin-left: 0"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
+                            <div class="ui form">
+                                <div class="field">
+                                    <label>عکس محصول</label>
+                                    <input type="file" placeholder="نام محصول">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- variable segment -->
-            <div id="variable-segment" style="display: none;" class="eight wide column">
-                <div class="sixteen wide tablet four wide computer column">
-                    <div class="ui form">
-                        <div class="field">
-                            <div class="ui action input">
-                                <div class="ui fluid selection dropdown">
-                                    <i class="dropdown icon"></i>
-                                    <div class="default text">نوع مالیات</div>
-                                    <div class="menu">
+        </div>
+        <!-- END OF GENRAL SECTION -->
+        <!-- PRICING -->
+
+
+
+        <div class="sixteen wide column">
+            <div class="ui segment sixteen column">
+                <div class="ui grid">
+                    <div class="sixteen wide tablet sixteen wide computer column">
+                        <h2 class="ui dividing header">قیمت گذاری</h2>
+                    </div>
+                    <div class="sixteen wide tablet eight wide computer column">
+                        <div class="ui form">
+                            <div class="field required">
+                                <label>نوع قیمت</label>
+                                <div class="ui action input">
+                                    <div class="ui fluid selection dropdown" id="priceType" name="priceType">
+                                        <i class="dropdown icon"></i>
+                                        <div class="default text">ثابت</div>
+                                        <div class="menu">
+                                            <div class="item" data-value="fixed">ثابت</div>
+                                            <div class="item" data-value="variable">متغییر</div>
+                                            <div class="item" data-value="unit">قیمت بر اساس تعداد</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- unit segment -->
-            <div id="unit-segment" style="display: none;" class="sixteen wide column">
-                <div class="ui segment sixteen column">
-                    <h3 class="ui dividing header">unit قیمت</h3>
-                    <div class="ui grid">
-                        <div class="sixteen wide tablet four wide computer column">
-                            <div class="ui form">
-                                <div class="field">
-                                    <input type="text" placeholder="قیمت بدون مالیات">
+                    <div class="sixteen wide tablet eight wide computer column">
+                        <div class="ui form">
+                            <div class="field required">
+                                <label>بهای تمام شده</label>
+                                <input id="cost" name="cost" type="text" class="persian-number" placeholder="بهای محصول">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fixed segment -->
+                    <div id="fixed-segment" class="sixteen wide column">
+                        <div class="ui segment sixteen column">
+                            <h3 class="ui dividing header">قیمت</h3>
+                            <div class="ui grid">
+                                <div class="sixteen wide tablet four wide computer column">
+                                    <div class="ui form">
+                                        <div class="field">
+                                            <input id="price" name="price" type="text" placeholder="قیمت بدون مالیات">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sixteen wide tablet two wide computer column center aligned">
+                                    <i class="big inverted blue bordered add icon"></i>
+                                </div>
+                                <div class="sixteen wide tablet four wide computer column">
+                                    <div class="ui form">
+                                        <div class="field">
+                                            <div class="ui action input">
+                                                <div class="ui fluid selection dropdown" id="taxType">
+                                                    <i class="dropdown icon"></i>
+                                                    <div class="default text">نوع مالیات</div>
+                                                    <div class="menu ajax-caller" data-url="tax">
+                                                    </div>
+                                                </div>
+                                                <button id="btnQuickAddTaxType" class="ui primary button">
+                                                    <i class="add large inverted circle icon" style="margin-left: 0"></i>
+                                                </button>
+                                                <div class="ui active dimmer inverted">
+                                                    <div class="ui small text loader">در حال بارگزاری</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sixteen wide tablet two wide computer column center aligned">
+                                    <i class="big inverted blue bordered minus icon"></i>
+                                </div>
+                                <div class="sixteen wide tablet four wide computer column">
+                                    <div class="ui form">
+                                        <div class="field">
+                                            <input type="text" name="totalPrice" id="totalPrice" placeholder="قیمت بعد از مالیات">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="sixteen wide tablet two wide computer column center aligned">
-                            +
-                        </div>
+                    </div>
+                    <!-- variable segment -->
+                    <div id="variable-segment" style="display: none;" class="eight wide column">
                         <div class="sixteen wide tablet four wide computer column">
                             <div class="ui form">
                                 <div class="field">
@@ -236,20 +210,52 @@
                                             <i class="dropdown icon"></i>
                                             <div class="default text">نوع مالیات</div>
                                             <div class="menu">
-
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="sixteen wide tablet two wide computer column center aligned">
-                            =
-                        </div>
-                        <div class="sixteen wide tablet four wide computer column">
-                            <div class="ui form">
-                                <div class="field">
-                                    <input type="text" name="totalPrice" placeholder="قیمت بعد از مالیات">
+                    </div>
+                    <!-- unit segment -->
+                    <div id="unit-segment" style="display: none;" class="sixteen wide column">
+                        <div class="ui segment sixteen column">
+                            <h3 class="ui dividing header">unit قیمت</h3>
+                            <div class="ui grid">
+                                <div class="sixteen wide tablet four wide computer column">
+                                    <div class="ui form">
+                                        <div class="field">
+                                            <input type="text" placeholder="قیمت بدون مالیات">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sixteen wide tablet two wide computer column center aligned">
+                                    +
+                                </div>
+                                <div class="sixteen wide tablet four wide computer column">
+                                    <div class="ui form">
+                                        <div class="field">
+                                            <div class="ui action input">
+                                                <div class="ui fluid selection dropdown">
+                                                    <i class="dropdown icon"></i>
+                                                    <div class="default text">نوع مالیات</div>
+                                                    <div class="menu">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sixteen wide tablet two wide computer column center aligned">
+                                    =
+                                </div>
+                                <div class="sixteen wide tablet four wide computer column">
+                                    <div class="ui form">
+                                        <div class="field">
+                                            <input type="text" name="totalPrice" placeholder="قیمت بعد از مالیات">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -258,6 +264,12 @@
             </div>
         </div>
     </div>
-</div>
+    <div class="row">
+        <div class="sixteen wide column">
+            <div id="btnSave" class="ui primary submit button">ذخیره</div>
+        </div>
+    </div>
 <!-- END OF PRICING -->
+
+    @Html.Partial("Templates/_QuickAddTemplates")
 </div>

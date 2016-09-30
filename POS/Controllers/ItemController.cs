@@ -38,12 +38,6 @@ namespace POS.Controllers
 
                 var tags = "";
 
-                foreach (TagModel tag in item.item.itemTag)
-                {
-                    tags += tag.value + ",";
-                }
-
-                tags = tags.Remove(tags.LastIndexOf(",", StringComparison.Ordinal));
 
                 var model = new EditViewModel
                 {
@@ -74,7 +68,8 @@ namespace POS.Controllers
                             Selected = (item.item.priceType.Equals("unit"))
                         }
                     },
-                    tags = tags,
+                    tags = item.item.itemTag.ToList().Select(e => e.value.ToString()).ToList()
+                    .Aggregate((a, b) => a + "," + b),
                     taxedPrice = item.item.taxedPrice
                     //itemDepartment = item.item.itemDepartment.Select(e => new SelectListItem
                     //{

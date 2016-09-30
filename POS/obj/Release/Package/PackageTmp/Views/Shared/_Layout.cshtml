@@ -1,6 +1,6 @@
 ﻿@using POS.Helpers
 <!DOCTYPE html>
-<html dir="rtl">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +11,13 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+<div id="pageLoader" class="ui inverted dimmer">
+    <div class="ui large text loader">لطفآ منتظر بمانید</div>
+</div>
+
     @Html.Partial("_Navigation")
 
-    <div class="main-wrapper">
+<div class="main-wrapper">
         <aside>
             @Html.Partial("_Sidebar")
         </aside>

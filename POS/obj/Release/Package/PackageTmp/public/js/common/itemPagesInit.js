@@ -1,4 +1,4 @@
-﻿define(["jquery", "domready!"], function ($) {
+﻿define(["jquery", "semantic", "domready!"], function ($) {
 
     var msg = "Default msg";
 
@@ -7,7 +7,7 @@
     }
 
     function initAjax(source) {
-        var root = $(source.firstChild);
+        var root = $(source);
         var url = $(root).data("url");
         $.ajax({
             url: "http://ieisys.com:12220/api/" + url,
@@ -16,15 +16,24 @@
         }).done(function (data) {
             if (data) {
                 $.each(data.items, function (key, value) {
-                    root.append($("<option>").attr("data-value", value._id).attr("class", "item").text(value.name));
+                    root.append($("<div>").attr("data-value", value._id).attr("class", "item").text(value.name));
                 });
-                console.log(root);
                 root.parent().siblings().last().removeClass("active");
             }
         }).fail(function (data) {
 
         }).always(function () {
 
+        });
+    }
+
+
+    function priceSectionUiInit() {
+        $("#itemPrice").dropdown({
+            onChange: function (value) {
+                console.log("change dired");
+                changePriceUi(value);
+            }
         });
     }
 
@@ -50,14 +59,7 @@
         }
     }
 
-    function priceSectionUiInit() {
-        $("#itemPrice").dropdown({
-            onChange: function (value) {
-                console.log("change dired");
-               changePriceUi(value);
-           }
-       });
-    }
+   
 
     return {
         initAjax: initAjax,

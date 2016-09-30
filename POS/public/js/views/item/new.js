@@ -1,4 +1,4 @@
-﻿define(["jquery", "iteminit", "semantic", "jqueryvalidate", "domready!"], function ($, iteminit) {
+﻿define(["jquery", "iteminit", "modals", "jqueryvalidate", "domready!"], function ($, iteminit, mdls) {
 
     // semantic init
     $(".accordion").accordion();
@@ -6,6 +6,7 @@
     $("#itemTag").dropdown({
         allowAdditions: true,
         maxSelections: 5,
+        saveRemoteData: false,
         apiSettings: {
             url: "http://ieisys.com:12220/api/tag/{query}"
         }
@@ -16,11 +17,20 @@
         iteminit.initAjax(value);
     });
 
+    mdls.departmentModal();
+    mdls.categoryModal();
+    mdls.taxTypeModal();
+    mdls.tagModal();
+    
     iteminit.priceSectionUiInit();
 
     $("#btnSave").on("click", function (e) {
         e.preventDefault();
-        //$("#CreateItemForm").form("submit");
+        $("#CreateItemForm").form("submit");
+        var isValid = $("#CreateItemForm").form("is valid");
+        if (!isValid) {
+            return;
+        }
         var toSend = {
             itemName: $("#itemName").val(),
             itemSku: $("#itemSku").val(),
@@ -33,6 +43,7 @@
             price: $("#price").val()
         };
         
+        $("#pageLoader").addClass("active");
         
         console.log(JSON.stringify(toSend));
         $.ajax({
@@ -44,13 +55,15 @@
         }).done(function (data) {
             if (data) {
                 console.log(data.item._id);
+                $("#pageLoader").removeClass("active");
                 location.replace("/item/edit/" + data.item._id);
                 //console.log(data);
             }
         }).fail(function (data) {
             alert(data);
+            $("#pageLoader").removeClass("active");
         }).always(function () {
-
+            $("#pageLoader").removeClass("active");
         });
 
     });

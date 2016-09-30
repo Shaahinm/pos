@@ -1,4 +1,4 @@
-﻿define(["jquery", "domready!"], function ($) {
+﻿define(["jquery", "semantic", "domready!"], function ($) {
 
     var msg = "Default msg";
 
@@ -18,7 +18,6 @@
                 $.each(data.items, function (key, value) {
                     root.append($("<div>").attr("data-value", value._id).attr("class", "item").text(value.name));
                 });
-                console.log(root);
                 root.parent().siblings().last().removeClass("active");
             }
         }).fail(function (data) {
@@ -28,14 +27,14 @@
         });
     }
 
- 
+
     function priceSectionUiInit() {
         $("#itemPrice").dropdown({
             onChange: function (value) {
                 console.log("change dired");
-               changePriceUi(value);
-           }
-       });
+                changePriceUi(value);
+            }
+        });
     }
 
     function changePriceUi(value) {
@@ -59,6 +58,8 @@
             default:
         }
     }
+
+   
 
     return {
         initAjax: initAjax,

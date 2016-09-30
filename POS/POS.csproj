@@ -162,14 +162,18 @@
     <Content Include="Content\fonts\Yekan.svg" />
     <Content Include="Content\semantic.rtl.css" />
     <Content Include="Content\themes\basic\assets\fonts\icons.svg" />
+    <Content Include="Content\themes\default\assets\fonts\icons.svg" />
+    <Content Include="Content\themes\default\assets\images\flags.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="public\js\common\capitalizer.js" />
     <Content Include="public\js\common\itemPagesInit.js" />
+    <Content Include="public\js\common\modals.js" />
     <Content Include="public\js\config.js" />
     <Content Include="public\js\views\home\index.js" />
     <Content Include="public\js\views\item\edit.js" />
+    <Content Include="public\js\views\item\index.js" />
     <Content Include="public\js\views\item\new.js" />
     <Content Include="Scripts\lib\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\lib\ai.0.22.19-build00125.min.js" />
@@ -182,6 +186,10 @@
     <Content Include="Content\themes\basic\assets\fonts\icons.eot" />
     <Content Include="Content\themes\basic\assets\fonts\icons.ttf" />
     <Content Include="Content\themes\basic\assets\fonts\icons.woff" />
+    <Content Include="Content\themes\default\assets\fonts\icons.eot" />
+    <Content Include="Content\themes\default\assets\fonts\icons.ttf" />
+    <Content Include="Content\themes\default\assets\fonts\icons.woff" />
+    <Content Include="Content\themes\default\assets\fonts\icons.woff2" />
     <None Include="Properties\PublishProfiles\IEISYS.pubxml" />
     <None Include="Scripts\lib\jquery-3.1.0.intellisense.js" />
     <Content Include="Scripts\app\main-currentTime.js" />
@@ -228,6 +236,7 @@
     <Content Include="Views\Item\Edit_partials\_additional.cshtml" />
     <Content Include="Views\Item\Edit_partials\_variant.cshtml" />
     <Content Include="Views\Item\Edit_partials\Templates\_SingleChoiceTemplate.cshtml" />
+    <Content Include="Views\Item\Templates\_QuickAddTemplates.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

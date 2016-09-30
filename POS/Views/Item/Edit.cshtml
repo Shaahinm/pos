@@ -11,7 +11,9 @@
     <a class="item" data-tab="variant">متغییرات</a>
 </div>
 <div class="ui bottom attached tab segment" data-tab="general">
+
     <form id="CreateItemForm" class="ui form">
+        @Html.HiddenFor(e => e._id, new { id = "_id", value = @Model._id })
         @Html.Partial("Edit_partials/_General", @Model)
     </form>
 </div>
